@@ -17,7 +17,7 @@ pipeline {
         stage('Remote SSH') {
             steps {
                 sshagent(['ssh-remote']) {
-                    sh 'ssh -o StrictHostKeyChecking=no -l root 58.84.1.238 touch test.txt'
+                    sh 'ssh -o StrictHostKeyChecking=no -p 234 -l root 58.84.1.238 touch test.txt'
                 }
             }
         }
