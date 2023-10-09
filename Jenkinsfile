@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'python:3.12.0-alpine3.18' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Clone') {
             steps {
-                sh 'python --version'
+                git branch: 'main', url: 'https://github.com/batungnbt/test-jenkins'
             }
         }
     }
