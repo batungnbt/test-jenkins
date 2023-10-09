@@ -1,11 +1,9 @@
 # Sử dụng một hình ảnh cơ sở CentOS
 FROM centos:latest
 
-# Cài đặt Nginx và các gói phụ thuộc
-RUN yum -y update && \
-    yum -y install epel-release && \
-    yum -y install nginx && \
-    yum clean all
+RUN yum -y install epel-release
+RUN yum -y update
+RUN yum -y install nginx
 
 # Chạy Nginx trong chế độ foreground khi hình ảnh được khởi động
 CMD ["nginx", "-g", "daemon off;"]
