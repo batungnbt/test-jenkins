@@ -1,5 +1,5 @@
 # Sử dụng một hình ảnh cơ sở CentOS
-FROM centos:latest
+FROM centos
 
 RUN yum -y install epel-release
 RUN yum -y update
